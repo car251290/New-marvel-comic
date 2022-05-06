@@ -9,7 +9,7 @@ const CharactersList = () => {
   
 
   const handleClick = () => {
-    this.setState((prevState) => {
+    ascendingSet((prevState) => {
       return {
         ascendingSet: !prevState.ascending
       }
