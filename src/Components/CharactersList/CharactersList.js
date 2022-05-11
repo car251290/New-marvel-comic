@@ -22,7 +22,7 @@ const CharactersList = () => {
     const sortedCharacters = _.orderBy(this.props.characters, ["name"], [direction, "asc"])
     const characters = sortedCharacters.map(character =>
       <div key={character.name}>
-        <Character handleClick={handleClick} key={character.id.characterId} character={character} showCharacter={this.props.showCharacter} />
+        <Character handleClick={handleClick} key={character.id.characterId} character={character} showCharacter={character} />
       </div>
     )
 
