@@ -1,17 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const Character = (props) => {
-  
+const Character = () => {
+  const [showCharacter,setshowCharacter]= useState([])
+
   const handleClick = () => {
-    props.showCharacter(props.character)
+    setshowCharacter(showCharacter)
   }
 
   
     return(
       <div className="character" onClick={handleClick}>
-        <img className="character-images" src={props.character.thumbnail.path+ '/portrait_fantastic' + '.' + props.character.thumbnail.extension} alt={props.character.name}/>
+        <img className="character-images" src={showCharacter.thumbnail.path+ '/portrait_fantastic' + '.' + showCharacter.thumbnail.extension} alt={showCharacter.name}/>
         <div className="character-name">
-          {props.character.name}
+          {showCharacter.name}
         </div>
       </div>
     )
