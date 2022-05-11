@@ -29,7 +29,7 @@ useEffect(()=>{
 
       return(
         <Switch>
-          <Route exact path='../characters/' render={() => <CharactersList characters={setCharacters} key={Character.id} sortEvent={this.sortEvent} showCharacter={showCharacter}/> }/>
+          <Route exact path='../characters/' render={() => <CharactersList characters={setCharacters} key={Character.id} sortEvent={Character.sortEvent} showCharacter={showCharacter}/> }/>
           <Route exact path='../characters/:id' render={() => (
             <div className='character'>
               <ShowCharacter character={setCharacter}/>
