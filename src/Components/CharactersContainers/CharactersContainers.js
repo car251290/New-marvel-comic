@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch, withRouter } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import CharactersList from '../CharactersList/CharactersList'
@@ -19,20 +19,6 @@ useEffect(()=>{
           setCharacter({ characters })
         })
 },[]);
- // componentDidMount() {
-   // this.getCharacters()
-  //}
-
- // getCharacters=() => {
-   // const URL = `https://gateway.marvel.com:443`
-    //const URI = `/v1/public/characters`
-   // const PARAMS = `?apikey=e2a674287cbd2b7e4916929820b966a0&ts=1538069103280&hash=a53b6090f58bc5656bb41a3fd32ff3fe`
-   // axios.get(`${URL}${URI}${PARAMS}`)
-     //    .then( response => {
-     //       const characters = response.data.data.results
-     //       this.setState({ characters })
-     //     })
- // }
 
   const showCharacter = (props) => {
     setCharacter({ Character }, props.history.push(`/characters/${ Character.id}`))
@@ -54,4 +40,4 @@ useEffect(()=>{
   
 }
 
-export default withRouter(CharactersContainer)
+export default CharactersContainer
