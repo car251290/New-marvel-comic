@@ -1,5 +1,9 @@
 # Getting Started with Create React App
 ## JS 
+What's new in ES8?
+
+Asynchronous code is at the core of JavaScript, and ES8 has officially added the ability to declare a function as async. By adding the async keyword in front of a function, you are able to defer the execution of code using the await statement. The return value of an async function is implicitly a promise object.
+
 ## REACT
 React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.
 
