@@ -5,13 +5,13 @@ import { useState } from 'react'
 import _ from 'lodash'
 
 const CharactersList = () => {
-  const [ascending,ascendingSet] = useState(false);
+  const [ascending,setAscending] = useState(false);
   
 
   const handleClick = () => {
-    ascendingSet((prevState) => {
+    setAscending((prevState) => {
       return {
-        ascendingSet: !prevState.ascending
+        setAscending: !prevState.ascending
       }
     });
   }
