@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route,Router } from 'react-router-dom'
 import { useState,useEffect } from 'react'
 import axios from 'axios'
 import CharactersList from '../CharactersList/CharactersList'
@@ -18,24 +18,23 @@ useEffect(()=>{
           const characters = response.data.results
           setCharacter({ characters })
         })
+        .catch(err => {
+          console.log(err)
+        })
 },[]);
 
   const showCharacter = (props) => {
     setCharacter({ Character }, props.history.push(`/characters/${ Character.id}`))
   }
-
- 
-    //const { characters, character } = this.state;
-
       return(
-        <Switch>
+        <Router> 
           <Route exact path='../characters/' render={() => <CharactersList characters={setCharacters} key={Character.id} sortEvent={Character.sortEvent} showCharacter={showCharacter}/> }/>
           <Route exact path='../characters/:id' render={() => (
             <div className='character'>
               <ShowCharacter character={setCharacter}/>
             </div>)}
           />
-        </Switch>
+        </Router>
       )
   
 }
