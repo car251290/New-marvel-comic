@@ -10,7 +10,7 @@ const Character = () => {
   
     return(
       <div className="character" onClick={handleClick}>
-        <img className="character-images" src={showCharacter.thumbnail.path+ '/portrait_fantastic' + '.' + showCharacter.thumbnail.extension} alt={showCharacter.name}/>
+        <img className="character-images" src={showCharacter.thumbnail.path+ '/portrait_fantastic' + showCharacter.thumbnail.extension} alt={showCharacter.name}/>
         <div className="character-name">
           {showCharacter.name}
         </div>
