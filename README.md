@@ -27,4 +27,5 @@ A plain HTTP connection can be easily monitored, modified, and impersonated.
 
 ## Marvel 
 
-
+Results
+Results returned by the API endpoints have the same general format, no matter which entity type the endpoint returns. Every successful call will return a wrapper object, which contains metadata about the call and a container object, which displays pagination information and an array of the results returned by this call. This pattern is consistent even if you are requesting a single object.
